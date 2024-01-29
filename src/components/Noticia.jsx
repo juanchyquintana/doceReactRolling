@@ -5,34 +5,23 @@ const Noticia = ({ noticia }) => {
 
   return (
 
-        <Card className="w-50">
-          {urlToImage && (
-            <Card.Img
-              variant="top"
-              src={urlToImage}
-              height={"250"}
-              alt={`Imagen de la noticia ${title}`}
-              className="img-fluid"
-            />
-          )}
+    <>
+      <Card className="cardsNoticia">
+        <Card.Img variant="top" src={urlToImage} />
 
-          <Card.Body>
-            <Card.Title className="text-warning py-2">{title}</Card.Title>
-            <Card.Subtitle className="pb-2">{source.name}</Card.Subtitle>
-            <Card.Text>{description}</Card.Text>
-          </Card.Body>
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Subtitle className="my-2 text-warning">{source.name}</Card.Subtitle>
+          <Card.Text>{description}</Card.Text>
+        </Card.Body>
 
-          <Card.Footer>
-            <a
-              className="btn btn-outline-warning w-100 text-uppercase fw-bold"
-              href={url}
-              target="_blank"
-            >
-              Leer Noticia
-            </a>
-          </Card.Footer>
-        </Card>
-
+        <Card.Footer>
+          <a href={url} className="btn btn-warning text-white w-100 ">
+            Ver
+          </a>
+        </Card.Footer>
+      </Card>
+    </>
   );
 };
 

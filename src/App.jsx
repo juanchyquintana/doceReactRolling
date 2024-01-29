@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import FormularioNoticias from "./components/FormularioNoticias";
+import './App.css'
 
 function App() {
   return (
